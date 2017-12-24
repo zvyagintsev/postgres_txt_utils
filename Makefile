@@ -10,7 +10,7 @@ include $(PGXS)
 text_utils.o: 
 	cc -fpic -c src/text_utils.c $(CFLAGS) -I$(INCLUDEDIR)
 text_utils.so: text_utils.o
-	cc -shared -o text_utils.so text_utils.o -DDEBUG -g
+	cc -shared -o text_utils.so text_utils.o 
 copy:
 	cp -f $(COPY_FILES) $(DESTINATION)
 install: copy
